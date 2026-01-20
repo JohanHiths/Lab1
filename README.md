@@ -1,9 +1,3 @@
-
 duck
-mamuth
-mouse
+mammoth
 cat
-dog
-
-
-

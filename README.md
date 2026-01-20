@@ -1,4 +1,1 @@
-duck
-mouse
-cat
-dog
+duck mouse cat dog

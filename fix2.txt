@@ -15,3 +15,12 @@ git checkout
 git tag
 git remote add origin
 git remote -v
+git branch
+git status
+git fetch origin
+git clone
+git log
+git init
+git diff
+git push --all
+git config

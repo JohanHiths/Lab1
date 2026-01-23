@@ -1,26 +1,67 @@
-git commit -m
-git cherry-pick 61599dd 
-git rebase -I HEAD~3
-git rebase --continue
-git commit --amend
-git remote add origin
-git log --oneline
-git push -u origin main
-git rm
-Add-Content README.md "dog"
-Get-Content README.md -replace "moose", "mouse" | Set-Content README.md
-git merge
-git add .
-git checkout
-git tag
-git remote add origin
-git remote -v
-git branch
-git status
-git fetch origin
-git clone
-git log
+
+
 git init
-git diff
-git push --all
-git config
+git remote add origin https://github.com/johanhiths/Lab1.git
+New-Item README.md -ItemType file
+Add-Content README.md "duck mouse cat"
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+git checkout -b feature1
+
+Add-Content README.md "dog"
+ (Get-Content README.md) -replace "moose", "mouse" | Set-Content README.md
+git add README.md
+git commit -m "Addade dog och replace moose med mouse"
+git push -u origin main
+git checkout main
+
+merge feature1
+git add README.md
+git commit
+git tag extinct 74ec87b
+
+git reset --hard HEAD~1
+
+
+git branch feature2
+
+(Get-Content README.md) -replace "mammoth", "Mammoth" | Set-Content README.md
+(Get-Content README.md) -replace "cat", "Cat" | Set-Content README.md
+(Get-Content README.md) -replace "duck", "Duck" | Set-Content README.md
+git add .
+git commit -m "Addade djur med stora bokstäver"
+
+
+New-Item fix1.txt -ItemType File -Force
+git add fix1.txt
+git commit -m "Addade fix1.txt"
+
+New-Item fix2.txt -ItemType File -Force
+git add fix2.txt
+git add .
+git commit -m "Addade fix2.txt"
+
+
+git checkout main
+
+git log --oneline feature2
+git cherry-pick 61599dd 
+
+git branch cleanup_test
+git checkout cleanup_test
+
+Add-Content README.md "bird"
+Add-content README-md "bear"
+Add-content README.md "wolf"
+git rebase -i HEAD~3
+git commit -m "Added several animals"
+git push -u origin main
+
+Add-content README.md "Turtle"
+ git add .
+ git commit -m "Addid Turtle"
+ git commit --amend -m"Added turtle"
+
+
